@@ -1,4 +1,7 @@
 package com.codeclan.example.deliciousdelightsservice.repositories;
 
-public interface BreadAndRiceRepository {
+import com.codeclan.example.deliciousdelightsservice.models.BreadAndRice;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BreadAndRiceRepository extends JpaRepository<BreadAndRice, Long> {
 }
