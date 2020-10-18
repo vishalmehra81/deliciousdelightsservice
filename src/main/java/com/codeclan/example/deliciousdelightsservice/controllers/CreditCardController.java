@@ -1,4 +1,4 @@
 package com.codeclan.example.deliciousdelightsservice.controllers;
 
-public class DebitController {
+public class CreditCardController {
 }

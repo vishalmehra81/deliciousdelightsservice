@@ -1,4 +1,6 @@
 package com.codeclan.example.deliciousdelightsservice.models;
 
-public class Credit {
+public interface IPay {
+    public double pay();
+
 }

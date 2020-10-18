@@ -1,17 +1,17 @@
 package com.codeclan.example.deliciousdelightsservice.models;
 
-public class BreadAndRice {
+public class Accompaniment {
 
     private Long id;
     private String item;
     private int price;
 
-    public BreadAndRice(String item, int price) {
+    public Accompaniment(String item, int price) {
         this.item = item;
         this.price = price;
     }
 
-    public BreadAndRice() {
+    public Accompaniment() {
     }
 
     public Long getId() {
