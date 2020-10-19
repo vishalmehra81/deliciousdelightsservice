@@ -3,6 +3,7 @@ package com.codeclan.example.deliciousdelightsservice.controllers;
 import com.codeclan.example.deliciousdelightsservice.models.Customer;
 import com.codeclan.example.deliciousdelightsservice.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

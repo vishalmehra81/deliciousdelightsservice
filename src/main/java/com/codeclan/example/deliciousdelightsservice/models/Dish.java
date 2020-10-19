@@ -1,7 +1,12 @@
 package com.codeclan.example.deliciousdelightsservice.models;
 
-public abstract class Dish {
+import javax.persistence.*;
 
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class Dish {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String item;
     private int price;
@@ -9,6 +14,9 @@ public abstract class Dish {
     public Dish(String item, int price) {
         this.item = item;
         this.price = price;
+    }
+
+    public Dish() {
     }
 
     public Long getId() {

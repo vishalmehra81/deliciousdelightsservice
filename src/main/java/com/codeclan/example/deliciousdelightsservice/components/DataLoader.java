@@ -1,10 +1,8 @@
 package com.codeclan.example.deliciousdelightsservice.components;
 
-import com.codeclan.example.deliciousdelightsservice.models.BreadAndRice;
-import com.codeclan.example.deliciousdelightsservice.models.Customer;
-import com.codeclan.example.deliciousdelightsservice.models.Menu;
-import com.codeclan.example.deliciousdelightsservice.models.Order;
+import com.codeclan.example.deliciousdelightsservice.models.*;
 import com.codeclan.example.deliciousdelightsservice.repositories.CustomerRepository;
+import com.codeclan.example.deliciousdelightsservice.repositories.MenuRepository;
 import com.codeclan.example.deliciousdelightsservice.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -12,6 +10,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class DataLoader implements ApplicationRunner {
@@ -21,6 +20,9 @@ public class DataLoader implements ApplicationRunner {
     
     @Autowired
     OrderRepository orderRepository;
+    
+    @Autowired
+    MenuRepository menuRepository;
 
     public DataLoader() {
 
@@ -56,7 +58,22 @@ public class DataLoader implements ApplicationRunner {
 
         Order order5 = new Order("Customised","PannerLD", 2.50, 6, "30/10/2020", 16.00, 1234);
         orderRepository.save(order5);
+        
+        List<Main> mainList = new ArrayList<>();
+        mainList.add(new Main("Paneer Bhurji",20));
 
+        List<Accompaniment> accompanimentsList = new ArrayList<>();
+        accompanimentsList.add(new Accompaniment("Pickle",20));
+
+        List<SweetAndSavory> sweetAndSavoriesList = new ArrayList<>();
+        sweetAndSavoriesList.add(new SweetAndSavory("Kheer",20));
+
+        List<BreadAndRice> breadAndRicesList = new ArrayList<>();
+        breadAndRicesList.add(new BreadAndRice("Rice",20));
+
+
+        Menu menu = new Menu(mainList,accompanimentsList,breadAndRicesList,sweetAndSavoriesList);
+        menuRepository.save(menu);
 
     }
 }
