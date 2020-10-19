@@ -1,17 +1,37 @@
 package com.codeclan.example.deliciousdelightsservice.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "orders")
 public class Order {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String meals;
-    private String items;
-    private double price;
-    private int quantity;
-    private String date;
-    private String subTotal;
-    private String orderId;
 
-    public Order(String meals, String items, double price, int quantity, String date, String subTotal, String orderId) {
+    @Column(name="meals")
+    private String meals;
+
+    @Column(name = "items")
+    private String items;
+
+    @Column(name = "price")
+    private double price;
+
+    @Column(name = "quantity")
+    private int quantity;
+
+    @Column(name = "date")
+    private String date;
+
+    @Column(name = "subTotal")
+    private double subTotal;
+
+    @Column(name = "orderId")
+    private int orderId;
+
+    public Order(String meals, String items, double price, int quantity, String date, double subTotal, int orderId) {
         this.meals = meals;
         this.items = items;
         this.price = price;
@@ -72,19 +92,19 @@ public class Order {
         this.date = date;
     }
 
-    public String getSubTotal() {
+    public double getSubTotal() {
         return subTotal;
     }
 
-    public void setSubTotal(String subTotal) {
+    public void setSubTotal(double subTotal) {
         this.subTotal = subTotal;
     }
 
-    public String getOrderId() {
+    public int getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(String orderId) {
+    public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
 }
