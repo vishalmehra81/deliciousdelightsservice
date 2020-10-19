@@ -1,13 +1,29 @@
 package com.codeclan.example.deliciousdelightsservice.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "customers")
 public class Customer {
 
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
+
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "mobile")
     private String mobile;
-    private String Address;
+
+    @Column(name = "address")
+    private  String Address;
 
     public Customer(String firstName, String lastName, String email, String mobile, String address) {
         this.firstName = firstName;

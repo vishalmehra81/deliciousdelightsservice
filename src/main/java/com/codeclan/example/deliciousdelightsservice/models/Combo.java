@@ -1,17 +1,12 @@
 package com.codeclan.example.deliciousdelightsservice.models;
 
-public class Combo extends Menu {
+public class Combo {
 
     private Long id;
     private ComboType type;
 
-    public Combo(ComboType comboType, int noOfItems) {
-        super(comboType.getItem());
+    public Combo(ComboType comboType) {
         this.type = comboType;
-    }
-
-    public Combo(int noOfItems) {
-        super(noOfItems);
     }
 
     public Long getId() {
