@@ -2,23 +2,20 @@ package com.codeclan.example.deliciousdelightsservice.models;
 
 import java.util.ArrayList;
 
-public abstract class Menu {
-    private int noOfItems;
+public class Menu {
     private ArrayList<Main>mains;
     private ArrayList<Accompaniment>accompaniments;
     private ArrayList<BreadAndRice>breadAndRices;
     private ArrayList<SweetAndSavory>sweetAndSavories;
+    private ArrayList<Combo>combos;
 
-    public Menu(int noOfItems) {
-        this.noOfItems = noOfItems;
+
+    public Menu() {
         this.mains = new ArrayList<Main>();
         this.accompaniments = new ArrayList<Accompaniment>();
         this.breadAndRices = new ArrayList<BreadAndRice>();
         this.sweetAndSavories = new ArrayList<SweetAndSavory>();
-    }
-
-    public int getNoOfItems() {
-        return noOfItems;
+        this.combos = new ArrayList<Combo>();
     }
 
     public int mainListSize(){
@@ -36,6 +33,12 @@ public abstract class Menu {
     public int sweetAndSavoryListSize(){
         return this.sweetAndSavories.size();
     }
+
+    public int comboListSize(){
+        return this.combos.size();
+    }
+
+
 
 
 }

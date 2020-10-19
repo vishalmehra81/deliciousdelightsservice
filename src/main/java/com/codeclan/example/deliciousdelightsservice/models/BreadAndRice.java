@@ -1,17 +1,12 @@
 package com.codeclan.example.deliciousdelightsservice.models;
 
-public class BreadAndRice {
+public class BreadAndRice extends Dish {
 
     private Long id;
-    private String item;
-    private int price;
 
     public BreadAndRice(String item, int price) {
-        this.item = item;
-        this.price = price;
-    }
+        super(item, price);
 
-    public BreadAndRice() {
     }
 
     public Long getId() {
@@ -22,19 +17,4 @@ public class BreadAndRice {
         this.id = id;
     }
 
-    public String getItem() {
-        return item;
-    }
-
-    public void setItem(String item) {
-        this.item = item;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
 }
