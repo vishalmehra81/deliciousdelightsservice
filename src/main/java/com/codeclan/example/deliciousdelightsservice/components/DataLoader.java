@@ -59,21 +59,37 @@ public class DataLoader implements ApplicationRunner {
         Order order5 = new Order("Customised","PannerLD", 2.50, 6, "30/10/2020", 16.00, 1234);
         orderRepository.save(order5);
         
-        List<Main> mainList = new ArrayList<>();
-        mainList.add(new Main("Paneer Bhurji",20));
+        List<Main> mainList1 = new ArrayList<>();
+        mainList1.add(new Main("Paneer Bhurji",20));
 
-        List<Accompaniment> accompanimentsList = new ArrayList<>();
-        accompanimentsList.add(new Accompaniment("Pickle",20));
+        List<Accompaniment> accompanimentsList1 = new ArrayList<>();
+        accompanimentsList1.add(new Accompaniment("Pickle",20));
 
-        List<SweetAndSavory> sweetAndSavoriesList = new ArrayList<>();
-        sweetAndSavoriesList.add(new SweetAndSavory("Kheer",20));
+        List<SweetAndSavory> sweetAndSavoriesList1 = new ArrayList<>();
+        sweetAndSavoriesList1.add(new SweetAndSavory("Kheer",20));
 
-        List<BreadAndRice> breadAndRicesList = new ArrayList<>();
-        breadAndRicesList.add(new BreadAndRice("Rice",20));
+        List<BreadAndRice> breadAndRicesList1 = new ArrayList<>();
+        breadAndRicesList1.add(new BreadAndRice("Rice",20));
 
 
-        Menu menu = new Menu(mainList,accompanimentsList,breadAndRicesList,sweetAndSavoriesList);
-        menuRepository.save(menu);
+        Menu menu1 = new Menu(mainList1,accompanimentsList1,breadAndRicesList1,sweetAndSavoriesList1);
+        menuRepository.save(menu1);
+
+        List<Main> mainList2 = new ArrayList<>();
+        mainList2.add(new Main("Chicken Rara",5));
+
+        List<Accompaniment> accompanimentsList2 = new ArrayList<>();
+        accompanimentsList2.add(new Accompaniment("Raita",2));
+
+        List<SweetAndSavory> sweetAndSavoriesList2 = new ArrayList<>();
+        sweetAndSavoriesList2.add(new SweetAndSavory("Rabri",8));
+
+        List<BreadAndRice> breadAndRicesList2 = new ArrayList<>();
+        breadAndRicesList2.add(new BreadAndRice("Naan",10));
+
+
+        Menu menu2 = new Menu(mainList2,accompanimentsList2,breadAndRicesList2,sweetAndSavoriesList2);
+        menuRepository.save(menu2);
 
     }
 }
