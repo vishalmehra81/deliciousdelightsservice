@@ -1,5 +1,6 @@
 package com.codeclan.example.deliciousdelightsservice.models;
 
+
 import javax.persistence.*;
 
 @Entity
@@ -83,4 +84,5 @@ public class Customer {
     public void setAddress(String address) {
         Address = address;
     }
+
 }

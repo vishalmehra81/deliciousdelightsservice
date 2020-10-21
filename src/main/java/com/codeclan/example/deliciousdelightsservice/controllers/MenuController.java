@@ -18,7 +18,7 @@ public class MenuController {
     @Autowired
     MenuRepository menuRepository;
 
-    @GetMapping(value = "/menu")
+    @GetMapping(value = "/menus")
     public ResponseEntity<List<Menu>> getAllMenu(){
         return new ResponseEntity<>(menuRepository.findAll(), HttpStatus.OK);
     }
